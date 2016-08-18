@@ -17,7 +17,7 @@ foreach($products as $product){
     <i class="fa fa-download"></i> Descargar <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
-    <li><a href="report/alerts-word.php">Word 2007 (.docx)</a></li>
+    <li><a href="report/alerts-word.php">Word(.docx)</a></li>
   </ul>
 </div>
 <?php endif;?>
@@ -41,7 +41,7 @@ $npaginas = floor(count($products)/$limit);
 $spaginas = count($products)%$limit;
 if($spaginas>0){ $npaginas++;}
 	?>
-	<h3>Página <?php echo $page." de ".$npaginas; ?></h3>
+	<!-- <h3>Página <?php echo $page." de ".$npaginas; ?></h3> -->
 <div class="btn-group pull-right">
 <?php
 $px=$page-1;
@@ -58,12 +58,12 @@ if($px<=$npaginas):
 </div>
 <div class="clearfix"></div>
 <br><table class="table table-bordered table-hover">
-	<thead>
+	<!-- <thead>
 		<th>Código</th>
 		<th>Nombre del producto</th>
 		<th>En stock</th>
 		<th></th>
-	</thead>
+	</thead> -->
 	<?php
 foreach($curr_products as $product):
 	$q=OperationData::getQYesF($product->id);
@@ -90,9 +90,9 @@ for($i=0;$i<$npaginas;$i++){
 ?>
 </div>
 <form class="form-inline">
-	<label for="limit">Limite</label>
+	<!-- <label for="limit">Limite</label> -->
 	<input type="hidden" name="view" value="home">
-	<input type="number" value=<?php echo $limit?> name="limit" style="width:60px;" class="form-control">
+	<!-- <input type="number" value=<?php echo $limit?> name="limit" style="width:60px;" class="form-control"> -->
 </form>
 <div class="clearfix"></div>
 	<?php
