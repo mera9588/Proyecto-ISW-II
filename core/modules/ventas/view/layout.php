@@ -51,7 +51,7 @@
           <li><a href="index.php?view=reports"><i class="fa fa-tasks"></i> Reportes</a></li>
           <?php if($u->is_admin):?>
           <li><a href="index.php?view=users"><i class="fa fa-users"></i> Usuarios </a></li>
-          <li><a href="index.php?view=settings"><i class="fa fa-cogs"></i> Configuración <small><span class="label label-warning">Experimental</span></small></a></li>
+          <!-- <li><a href="index.php?view=settings"><i class="fa fa-cogs"></i> Configuración</a></li> -->
         <?php endif;?>
       </ul>
     <?php endif;?>
